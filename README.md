@@ -15,7 +15,7 @@ True RUL values provided for test set
 Dataset Source: NASA CMAPSS Dataset | Direct Download - [https://phm-datasets.s3.amazonaws.com/NASA/6.+Turbofan+Engine+Degradation+Simulation+Data+Set.zip]
 
 Methodology:
-------------
+
 RUL calculation with clipping at 125 cycles
 MinMax scaling of sensor data
 Sequence creation (50 time steps) for LSTM
@@ -23,7 +23,7 @@ Sequence creation (50 time steps) for LSTM
 Early stopping (patience=10)
 
 Results:
---------
+
 Mean Absolute Error (MAE): 11.54 cycles
 Root Mean Squared Error (RMSE): 16.50 cycles
 R² Score: 0.8423
@@ -31,7 +31,7 @@ R² Score: 0.8423
 90% of predictions accurate within 26 cycles
 
 Key Features:
--------------
+
 Interactive Plotly dashboards for model evaluation
 Per-engine prediction analysis
 Error distribution visualization
@@ -54,14 +54,14 @@ Scratches
 Dataset Source: NEU Surface Defect Database on Kaggle - [https://www.kaggle.com/datasets/kaustubhdikshit/neu-surface-defect-database]
 
 Methodology:
-------------
+
 Custom OpenCV preprocessing pipeline (CLAHE, Gaussian blur, normalization)
 4-block CNN architecture with BatchNormalization and Dropout
 Data augmentation (rotation, shifts, zoom, flips)
 Train/val/test split: 70/15/15
 
 Results:
---------
+
 Test Accuracy: 98.61%
 Precision: 98.67%
 Recall: 98.61%
@@ -69,7 +69,7 @@ F1-Score: 98.61%
 Only 3 misclassifications out of 216 test samples
 
 Key Files:
-----------
+
 preprocessing_pipeline1.png - Visualization of preprocessing steps
 best_cnn_model2.h5 - Best model checkpoint
 training_history2.pkl - Training metrics
@@ -88,7 +88,7 @@ Same 6 defect classes as Project 1
 Dataset Source: NEU Surface Defect Database on Kaggle (includes VOC format annotations) - [https://www.kaggle.com/datasets/kaustubhdikshit/neu-surface-defect-database]
 
 Methodology:
-------------
+
 Converted VOC format annotations to YOLO format using Globox
 YOLOv11n (nano) model architecture from Ultralytics YOLO
 Trained for 80 epochs with early stopping
@@ -99,7 +99,7 @@ Results: Overall mAP50: 71.8%  |
 -------------------------------|
 
 Per-class performance:
-----------------------
+
 Crazing: 47.3% mAP50
 Inclusion: 84.4% mAP50
 Patches: 92.8% mAP50 (best)
@@ -111,7 +111,7 @@ Recall: 65.5%
 F1-Score: 66.2%
 
 Key Files:
-----------
+
 steel_defect_detector_2.pt - Trained YOLO model
 data_fixed_2.yaml - Dataset configuration
 Training logs in defect_detection_fixed_2
